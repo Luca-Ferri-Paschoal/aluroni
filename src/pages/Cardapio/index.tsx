@@ -2,9 +2,13 @@ import { useState } from 'react';
 import { ReactComponent as Logo } from 'assets/logo.svg';
 import Buscador from './Buscador';
 import { Cabecalho, ExibeCardapio, Menu } from './styled';
+import Filtros from './Filtros';
+import Ordenador from './Ordenador';
 
 const Cardapio = () => {
     const [busca, setBusca] = useState('');
+    const [filtro, setFiltro] = useState<number | null>(null);
+    const [ordenador, setOrdenador] = useState('');
     
     return (
         <main>
@@ -20,6 +24,18 @@ const Cardapio = () => {
                     busca={busca}
                     setBusca={setBusca}
                 />
+                <div
+                    className='ExibeCardapio__filtros'
+                >
+                    <Filtros
+                        filtro={filtro}
+                        setFiltro={setFiltro}
+                    />
+                    <Ordenador
+                        ordenador={ordenador}
+                        setOrdenador={setOrdenador}
+                    />
+                </div>
             </ExibeCardapio>
         </main>
     );
