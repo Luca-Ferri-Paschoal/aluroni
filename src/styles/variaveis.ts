@@ -9,3 +9,7 @@ export const black = '#4c4d5e';
 export const lightGrey = '#f6f6f6';
 export const blue = '#282b57';
 export const red = '#d73b3b';
+export const massas = '#d73b3b';
+export const carnes = '#30201e';
+export const combos = '#e6c864';
+export const veganos = '#80aa40';

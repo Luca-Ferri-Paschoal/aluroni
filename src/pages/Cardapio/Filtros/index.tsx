@@ -1,10 +1,6 @@
 import filtros from './filtros.json';
 import { FiltrosContainer } from './styled';
-
-type IOpcao = {
-    id: number;
-    label: string;
-}
+import IOpcao from 'interfaces/IOpcao';
 
 const Filtros = (props: {
     filtro: number | null,

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import backgroundImage from 'assets/cardapio-imgs/header.png';
+import backgroundImage from 'assets/header.png';
 import {
     dark, paddingHorizontal,
     paddingHorizontalMd,
