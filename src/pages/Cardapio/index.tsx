@@ -5,11 +5,12 @@ import { Cabecalho, ExibeCardapio, Menu } from './styled';
 import Filtros from './Filtros';
 import Ordenador from './Ordenador';
 import Itens from './Itens';
+import IOrdenador from 'interfaces/IOrdenador';
 
 const Cardapio = () => {
     const [busca, setBusca] = useState('');
     const [filtro, setFiltro] = useState<number | null>(null);
-    const [ordenador, setOrdenador] = useState('');
+    const [ordenador, setOrdenador] = useState<IOrdenador>('');
     
     return (
         <main>
@@ -41,7 +42,11 @@ const Cardapio = () => {
                         setOrdenador={setOrdenador}
                     />
                 </div>
-                <Itens/>
+                <Itens
+                    busca={busca}
+                    filtro={filtro}
+                    ordenador={ordenador}
+                />
             </ExibeCardapio>
         </main>
     );

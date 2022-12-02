@@ -2,10 +2,11 @@ import { useState } from 'react';
 import opcoes from './opcoes.json';
 import { OrdenadorButton } from './styled';
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
+import IOrdenador from 'interfaces/IOrdenador';
 
 const Ordenador = (props: {
-    ordenador: string,
-    setOrdenador: React.Dispatch<React.SetStateAction<string>>
+    ordenador: IOrdenador,
+    setOrdenador: React.Dispatch<React.SetStateAction<IOrdenador>>
 }) => {
     const {
         ordenador,
@@ -47,7 +48,7 @@ const Ordenador = (props: {
                         key={opcao.value}
                         onClick={() => {
                             setNomeOrdenador(opcao.nome)
-                            setOrdenador(opcao.value)
+                            setOrdenador(opcao.value as IOrdenador)
                         }}
                     >
                         {opcao.nome}
