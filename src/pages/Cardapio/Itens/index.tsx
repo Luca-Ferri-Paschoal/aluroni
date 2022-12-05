@@ -1,8 +1,8 @@
-import cardapio from './itens.json';
+import cardapio from 'Data/cardapio.json';
 import Item from './Item';
 import { ItensContainer } from './styled';
 import { useCallback, useEffect, useState } from 'react';
-import IItem from 'interfaces/IItem';
+import IItemCardapio from 'interfaces/IItemCardapio';
 import IOrdenador from 'interfaces/IOrdenador';
 import OrdenadorEnum from 'Enums/OrdenadorEnum';
 
@@ -19,7 +19,7 @@ const Itens = (props: {
 
 	const [lista, setLista] = useState([...cardapio]);
 
-	const aplicaTestes = useCallback((cardapio: IItem[]): IItem[] => {
+	const aplicaTestes = useCallback((cardapio: IItemCardapio[]): IItemCardapio[] => {
 		const testaBusca = (
 			exp: RegExp, 
 			titulo: string
@@ -38,8 +38,8 @@ const Itens = (props: {
 		};
     
 		const testaOrdenador = (
-			item1: IItem,
-			item2: IItem
+			item1: IItemCardapio,
+			item2: IItemCardapio
 		): number => {
 			if (ordenador !== '') {
 				const categoria = OrdenadorEnum[ordenador];

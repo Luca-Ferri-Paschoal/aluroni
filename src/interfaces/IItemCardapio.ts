@@ -1,4 +1,4 @@
-export default interface IItem {
+export default interface IItemCardapio {
 	title: string,
 	description: string,
 	photo: string,

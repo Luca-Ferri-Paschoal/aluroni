@@ -1,7 +1,7 @@
-import IItem from 'interfaces/IItem';
+import IItemCardapio from 'interfaces/IItemCardapio';
 import { ItemContainer } from './styled';
 
-const Item = (props: IItem) => {
+const Item = (props: IItemCardapio) => {
 	const {
 		title,
 		description,
