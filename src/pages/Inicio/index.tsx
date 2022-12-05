@@ -1,8 +1,8 @@
 import cardapio from 'Data/cardapio.json';
 import { Recomendado, Recomendados, Titulo } from './styled';
-const pratos = [...cardapio];
 
 const Inicio = () => {
+	const pratos = [...cardapio];
 	const pratosRecomendados = pratos.sort(
 		() => 0.5 - Math.random()
 	).splice(0,3);

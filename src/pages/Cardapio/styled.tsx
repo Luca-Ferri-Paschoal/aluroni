@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import backgroundImage from 'assets/header.png';
 import {
 	dark,
 	paddingHorizontal,
@@ -8,46 +7,8 @@ import {
 	paddingHorizontalSm
 } from '../../styles/variaveis';
 import { desktopMd, desktopSm, desktopXsm } from '../../styles/breackpoints';
-
-export const Menu = styled.nav`
-    padding: 20px ${paddingHorizontal};
-    @media (max-width: ${desktopXsm}) {
-      padding: 20px ${paddingHorizontalMobile};
-    }
-    @media (min-width: ${desktopXsm}) and (max-width: ${desktopSm}) {
-      padding: 20px ${paddingHorizontalSm};
-    }
-    @media (min-width: ${desktopSm}) and (max-width: ${desktopMd}) {
-      padding: 20px ${paddingHorizontalMd};
-    }
-`;
   
-export const Cabecalho = styled.header`
-    align-items: center;
-    background-image: url(${backgroundImage});
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    height: 300px;
-    padding: 0px ${paddingHorizontal};
-    @media (max-width: ${desktopXsm}) {
-      padding: 0px ${paddingHorizontalMobile};
-    }
-    @media (min-width: ${desktopXsm}) and (max-width: ${desktopSm}) {
-      padding: 0px ${paddingHorizontalSm};
-    }
-    @media (min-width: ${desktopSm}) and (max-width: ${desktopMd}) {
-      padding: 0px ${paddingHorizontalMd};
-    }
-    .Cabecalho__texto {
-      color: white;
-      font-size: 5rem;
-      min-width: 400px;
-      width: 40%;
-    }
-`;
-  
-export const ExibeCardapio = styled.section`
+export const CardapioContainer = styled.section`
     padding: 50px ${paddingHorizontal};
     @media (max-width: ${desktopXsm}) {
       padding: 50px ${paddingHorizontalMobile};
