@@ -9,7 +9,7 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-  <React.StrictMode>
-    <Cardapio/>
-  </React.StrictMode>
+	<React.StrictMode>
+		<Cardapio/>
+	</React.StrictMode>
 );

@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import backgroundImage from 'assets/header.png';
 import {
-    dark, paddingHorizontal,
-    paddingHorizontalMd,
-    paddingHorizontalMobile,
-    paddingHorizontalSm
+	dark,
+	paddingHorizontal,
+	paddingHorizontalMd,
+	paddingHorizontalMobile,
+	paddingHorizontalSm
 } from '../../styles/variaveis';
 import { desktopMd, desktopSm, desktopXsm } from '../../styles/breackpoints';
 

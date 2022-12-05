@@ -11,76 +11,76 @@ const Itens = (props: {
     filtro: number | null,
     ordenador: IOrdenador,
 }) => {
-    const {
-        busca,
-        filtro,
-        ordenador
-    } = props;
+	const {
+		busca,
+		filtro,
+		ordenador
+	} = props;
 
-    const [lista, setLista] = useState([...cardapio]);
+	const [lista, setLista] = useState([...cardapio]);
 
-    const aplicaTestes = useCallback((cardapio: IItem[]): IItem[] => {
-        const testaBusca = (
-            exp: RegExp, 
-            titulo: string
-        ): boolean => {
-            return exp.test(titulo);
-        }
+	const aplicaTestes = useCallback((cardapio: IItem[]): IItem[] => {
+		const testaBusca = (
+			exp: RegExp, 
+			titulo: string
+		): boolean => {
+			return exp.test(titulo);
+		};
     
-        const testaFiltro = (
-            filtro: number | null,
-            id: number
-        ): boolean => {
-            return filtro
-                ? id === filtro
-                : true
-            ;
-        }
+		const testaFiltro = (
+			filtro: number | null,
+			id: number
+		): boolean => {
+			return filtro
+				? id === filtro
+				: true
+			;
+		};
     
-        const testaOrdenador = (
-            item1: IItem,
-            item2: IItem
-        ): number => {
-            if (ordenador !== '') {
-                const categoria = OrdenadorEnum[ordenador];
+		const testaOrdenador = (
+			item1: IItem,
+			item2: IItem
+		): number => {
+			if (ordenador !== '') {
+				const categoria = OrdenadorEnum[ordenador];
                 
-                if (
-                    item1[categoria] > item2[categoria]
-                ) return 1;
+				if (
+					item1[categoria] > item2[categoria]
+				) return 1;
     
-                else if (
-                    item1[categoria] < item2[categoria]
-                ) return -1;
+				else if (
+					item1[categoria] < item2[categoria]
+				) return -1;
     
-                else return 0;
-            }
+				else return 0;
+			}
     
-            return 0;
-        }
+			return 0;
+		};
 
-        const exp = new RegExp(busca.trim(), 'ig');
+		const exp = new RegExp(busca.trim(), 'ig');
 
-        return cardapio.filter(
-            item => 
-                testaBusca(exp, item.title) &&
+		return cardapio.filter(
+			item => 
+				testaBusca(exp, item.title) &&
                 testaFiltro(filtro, item.category.id)
-        ).sort(testaOrdenador);
-    }, [busca, filtro, ordenador] );
+		).sort(testaOrdenador);
+	}, [busca, filtro, ordenador] );
 
-    useEffect(() => {
-        setLista(aplicaTestes(cardapio));
-    }, [busca, filtro, ordenador, aplicaTestes]);
+	useEffect(() => {
+		setLista(aplicaTestes(cardapio));
+	}, [busca, filtro, ordenador, aplicaTestes]);
 
-    return (
-        <ItensContainer>
-            {lista.map(item => (
-                <Item
-                    key={item.id}
-                    {...item}
-                />
-            ))}
-        </ItensContainer>
-    );
-}
+	return (
+		<ItensContainer>
+			{lista.map(item => (
+				<Item
+					key={item.id}
+					{...item}
+				/>
+			))}
+		</ItensContainer>
+	);
+};
  
 export default Itens;

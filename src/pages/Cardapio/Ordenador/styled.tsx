@@ -12,9 +12,9 @@ const OrdenadorAtivo = `
 `;
 
 const ativa = (ativo: boolean): string =>
-  ativo
-    ? OrdenadorAtivo
-    : OrdenadorInativo
+	ativo
+		? OrdenadorAtivo
+		: OrdenadorInativo
 ;
 
 export const OrdenadorButton = styled.button<{ ativo: boolean }>`
