@@ -1,11 +1,21 @@
 import styled from 'styled-components';
-import { desktopXsm, mobile } from 'styles/breackpoints';
-import { carnes, combos, darkGrey, massas, red, veganos } from 'styles/variaveis';
+import { desktopXsm } from 'styles/breackpoints';
+import { darkGrey, grey, red } from 'styles/variaveis';
 
 export const ItemContainer = styled.div`
     display: flex;
+    align-items: center;
+    border-radius: 10px;
     flex-wrap: wrap;
     width: 90%;
+    padding: 20px;
+    transition: .2s ease-in;
+    width: 90%;
+
+    &:hover {
+        background-color: ${grey};
+        cursor: pointer;
+    }
 
     .ItemContainer__imagem {
         min-width: 240px;
@@ -26,6 +36,7 @@ export const ItemContainer = styled.div`
         flex-wrap: wrap;
         justify-content: space-around;
         padding: 0 20px;
+        margin: 0 20px;
         @media (max-width: ${desktopXsm}) {
             flex-direction: row;
             margin-top: 20px;
@@ -46,48 +57,6 @@ export const ItemContainer = styled.div`
             max-width: 600px;
             margin-bottom: 20px;
         }
-    }
-
-    .ItemContainer__tags {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin-bottom: 20px;
-        max-width: 700px;
-        @media (max-width: ${desktopXsm}) {
-            justify-content: flex-end;
-        }
-        @media (max-width: ${mobile}) {
-            justify-content: flex-start;
-        }
-        > div {
-            margin: 10px;
-        }
-    }
-
-    .ItemContainer__tipo {
-        align-items: center;
-        border-radius: 2px;
-        display: flex;
-        font-weight: bold;
-        height: 40px;
-        justify-content: center;
-        padding: 10px 30px;
-    }
-
-    .massas {
-        background-color: ${massas};
-        color: white;
-    }
-    .carnes {
-        background-color: ${carnes};
-        color: white;
-    }
-    .combos {
-        background-color: ${combos};
-    }
-    .veganos {
-        background-color: ${veganos};
     }
     
     .ItemContainer__porcao,

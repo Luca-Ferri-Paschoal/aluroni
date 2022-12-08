@@ -1,12 +1,6 @@
 import styled from 'styled-components';
 import { red, redDark } from 'styles/variaveis';
 
-export const Titulo = styled.h3`
-    color: $dark;
-    font - size: 3rem;
-    margin - bottom: 30px;
-`;
-
 export const Recomendados = styled.div`
     border-radius: 2px;
     display: flex;
@@ -42,30 +36,31 @@ export const Recomendado = styled.div`
     }
 `;
 
-// const NossaCasa = {
-//     margin - bottom: 100px;
-//     position: relative;
-//     width: 100 %;
-//     img {
-//         border - radius: 5px;
-//         width: 100 %;
-//     }
-//     & __endereco {
-//         align - items: center;
-//         background - color: $dark;
-//         border - radius: 5px;
-//         bottom: -45px;
-//         color: white;
-//         display: flex;
-//         flex - direction: column;
-//         font - weight: bold;
-//         height: 100px;
-//         justify - content: center;
-//         position: absolute;
-//         margin: 0 auto;
-//         left: 0;
-//         right: 0;
-//         width: 200px;
-//     }
-// }
-// `;
+export const NossaCasa = styled.div`
+    margin-bottom: 100px;
+    position: relative;
+    width: 100%;
+
+    img {
+        border-radius: 5px;
+        width: 100 %;
+    }
+    
+    .NossaCasa__endereco {
+        align-items: center;
+        background-color: $dark;
+        border-radius: 5px;
+        bottom:-45px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        font-weight: bold;
+        height: 100px;
+        justify-content: center;
+        position: absolute;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        width: 200px;
+    }
+`;

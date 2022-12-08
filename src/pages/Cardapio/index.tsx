@@ -5,6 +5,7 @@ import Filtros from './Filtros';
 import Ordenador from './Ordenador';
 import Itens from './Itens';
 import IOrdenador from 'interfaces/IOrdenador';
+import { Titulo } from 'styles/Tema';
 
 const Cardapio = () => {
 	const [busca, setBusca] = useState('');
@@ -13,11 +14,11 @@ const Cardapio = () => {
 
 	return (
 		<CardapioContainer>
-			<h3
+			<Titulo
 				className='ExibeCardapio__titulo'
 			>
 				Cardápio
-			</h3>
+			</Titulo>
 			<Buscador
 				busca={busca}
 				setBusca={setBusca}

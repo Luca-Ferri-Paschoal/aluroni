@@ -1,4 +1,4 @@
-export default interface IItemCardapio {
+export default interface IPrato {
 	title: string,
 	description: string,
 	photo: string,
